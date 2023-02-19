@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maxium-scale=1.0, user-scalable=no">
+  <title>Bomb Game</title>
+</head>
+<body>
+  <div class="main-container">
+    <canvas id="game"></canvas>
+
+    <div class="buttons">
+      <img id="up" src="./assets/img/up-arrow.svg" alt="">
+      <img id="left" src="./assets/img/left-arrow.svg" alt="">
+      <img id="down" src="./assets/img/down-arrow.svg" alt="">
+      <img id="right" src="./assets/img/right-arrow.svg" alt="">
+    </div>
+
+    <div class="messages">
+      <p id="time">Time: <span></span></p>
+      <p id="lifes"></p>
+    </div>
+  </div>
+  <div class="message-box">
+    <div class="continue">
+      <p class="continue-message">Would you like to continue?</p>
+      <button class="button" value="yes">yes</button>
+      <button class="button" value="no">no</button>
+    </div>
+
+    <div class="game-over">game over</div>
+
+    <div class="win">you win!</div>
+  </div>
+
+  <script src="./assets/javascript/maps.js"></script>
+  <script src="./assets/javascript/game.js"></script>
+</body>
+</html>

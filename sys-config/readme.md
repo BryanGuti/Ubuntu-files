@@ -1,0 +1,31 @@
+- Downloaded apps
+  - Google Chrome
+  - Mozila Firefox
+  - Spotify
+  - Visual Studio Code
+- Terminal
+  - Git, install apt repository
+    - user.name
+    - user.email
+    - init.main
+  - build-essentials
+  - download cs50 library
+  - zsh shell
+  - oh my shell
+  - starship or powerlevel10k theme
+- Browser
+  - set gmail accounts
+  - set github account
+- Text editor (vscode)
+  - Sync github account
+  - Sync settings
+    - Shortcuts
+    - extensions
+    - etcetera
+- SO (Ubuntu)
+  - Settings
+    - Appereance
+    - Keyboard
+    - Mouse
+    - Darkmode
+    - etcetera

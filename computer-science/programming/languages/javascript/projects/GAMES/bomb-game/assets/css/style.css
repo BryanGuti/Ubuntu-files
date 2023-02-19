@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&display=swap');
+
+/* General styles */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+
+}
+
+body {
+  display: flex;
+  position: relative;
+  background-color: #282828;
+}
+
+/* Game */
+
+.main-container {
+  display: grid;
+  place-content: center;
+  grid-template-areas:
+  "game score"
+  "game buttons";
+  width: 100%;
+  height: 100vh;
+  gap: 4rem;
+  /* padding: 3rem; */
+}
+
+/* Canvas */
+
+#game {
+  place-self: center;
+  border-radius: .6rem;
+  background-color: #99ff009f;
+  grid-area: game;
+}
+
+/* Buttons */
+
+.buttons {
+  display: grid;
+  place-content: center;
+  grid-template-areas:
+  "up up up up"
+  "left left right right"
+  "down down down down";
+  grid-area: buttons;
+  row-gap: 1rem;
+  column-gap: 7rem;
+  padding: auto;
+}
+
+.buttons > img {
+  width: 5rem;
+  cursor: pointer;
+}
+
+.buttons > #up {
+  grid-area: up;
+  justify-self: center;
+}
+.buttons > #left {
+  grid-area: left;
+  justify-self: end;
+}
+.buttons > #right {
+  grid-area: right;
+  justify-self: start;
+}
+.buttons > #down {
+  grid-area: down;
+  justify-self: center;
+}
+
+/* Messages */
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: left;
+  color: #ffffff;
+  grid-area: score;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  gap: 1rem;
+}
+
+
+.messages #time span {
+  font-weight: normal;
+}
+
+/* Start box */
+
+.message-box {
+  position: absolute;
+  display: none;
+  width: 100%;
+  background-color: #ffffff57;
+  /* backdrop-filter: blur(6px); */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  align-items: center;
+}
+
+.continue {
+  padding: 3rem;
+  display: none;
+  width: 100%;
+  justify-content: center;
+  gap: 2rem;
+  grid-template-areas:
+  "message message"
+  "yes no";
+  place-items: center;
+}
+
+.continue .continue-message {
+  grid-area: message;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: bold;
+  text-align: center;
+}
+
+.button {
+  padding: 1rem;
+  border: none;
+  border-radius: .6rem;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #FFFFFF;
+  cursor: pointer;
+  /* width: clamp(40vw); */
+  width: 25vw;
+}
+
+.continue [value="yes"]{
+  background-color: #60db14;
+  grid-area: yes;
+}
+.continue [value="no"]{
+  background-color: #ff0000;
+  grid-area: no;
+}
+
+.win {
+  display: none;
+}
+
+.game-over {
+  display: none;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #ff0000;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(4rem, 9vw, 11rem);
+  padding: 2rem;
+}
+/* Hover */
+
+.buttons > img:hover {
+  background-color: #99ff0053;
+}
+
+.buttons > img:active {
+  background-color: #99ff009f;
+}
+
+/* Media queries */
+
+@media (max-width: 700px) {
+  .main-container {
+    grid-template-areas:
+    "score"
+    "game"
+    "buttons";
+    gap: 2rem;
+  }
+  .messages {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
